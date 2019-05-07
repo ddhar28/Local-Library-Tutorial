@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h2 Enter book details 
+  form(action="/add", method="post")
+    input(type="text", name="title", placeholder="Title")
+    input(type="text", name="author", placeholder="Author")
+    input(type="text", name="genre", placeholder="Genre")
+    button(type="submit") Add
+
+
+
+  //- div(style="padding: 5px; width: auto;" )
+  //-   span Name :
+  //-   input
+  //-   span Author :
+  //-   input
+  //-   span Genre :
+  //-   input
+  //- button  Add 

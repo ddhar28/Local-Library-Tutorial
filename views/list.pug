@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 List of available books
+  table(style="padding: 5px; width: 50%;text-align: left;" )
+    tr
+      th Book Id
+      th Book Name
+      th Author
+      th Genre
+    each book in rows
+      tr(style="text-align: left;")
+        td= book.book_id
+        td= book.book_name
+        td= book.author
+        td= book.genre
+        td
+          a(href="/edit/"+ book.book_id) edit
+        td
+          form(action="/edit/delete/"+ book.book_id, method="post")
+            button(type="submit") Delete
+//- [{ book_id: 1, book_name: 'ABC', author: 'Debi', genre: 'XYZ' }]
+

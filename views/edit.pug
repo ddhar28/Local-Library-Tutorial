@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 Edit
+  form(action="/edit/"+ book.book_id, method="post")
+    input(type="text", name="title", placeholder="Title", value=book.book_name)
+    br
+    input(type="text", name="author", placeholder="Author", value=book.author)
+    br
+    input(type="text", name="genre", placeholder="Genre", value=book.genre)
+    br
+    button(type="submit") Save
